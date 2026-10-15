@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# insumos originais (arquivos já copiados para public/downloads)
+_insumos/
+docs/pdv-manual-extracted.txt
+docs/clinica-manual-extracted.txt
