@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ShoppingCart, Stethoscope, ArrowRight, Download, BookOpen, CheckCircle2 } from "lucide-react";
+import { ShoppingCart, Stethoscope, ArrowRight, Download, BookOpen, CheckCircle2, Sparkles } from "lucide-react";
 import { DOWNLOADS_DATA } from "@/config/downloads";
 
 export default function ProductCardGrid() {
@@ -12,13 +12,13 @@ export default function ProductCardGrid() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-indigo-400 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20">
-            Nossos Softwares Principais
+            Licença Vitalícia • Sem Mensalidades
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Soluções Sob Medida para o Seu Negócio
+            Sistemas de Gestão com Pagamento Único para o Seu Negócio
           </h2>
           <p className="text-slate-400 text-base leading-relaxed">
-            Desenvolvidos com arquitetura independente, rápida e segura. Escolha o software ideal para a sua atividade.
+            Desenvolvidos com arquitetura independente, rápida e segura. Pague uma única vez e tenha o software definitivo no seu computador.
           </p>
         </div>
 
@@ -29,16 +29,18 @@ export default function ProductCardGrid() {
 
             <div>
               {/* Header do Card */}
-              <div className="flex items-center justify-between gap-4 mb-6">
+              <div className="flex items-start justify-between gap-4 mb-5">
                 <div className="flex items-center gap-3.5">
-                  <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shadow-md">
+                  <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shadow-md shrink-0">
                     <ShoppingCart className="w-7 h-7" />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider">
-                      Comércio & Balcão
+                    <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider block">
+                      PDV Spin • Comércio &amp; Varejo
                     </span>
-                    <h3 className="text-2xl font-black text-white">{pdv.name}</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-white leading-tight">
+                      Sistema PDV Frente de Caixa e Estoque Sem Mensalidade
+                    </h3>
                   </div>
                 </div>
                 <span className="text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 shrink-0">
@@ -46,8 +48,27 @@ export default function ProductCardGrid() {
                 </span>
               </div>
 
+              {/* Box de Preço e Selo CRO */}
+              <div className="mb-6 p-4 rounded-2xl bg-emerald-950/30 border border-emerald-500/30 space-y-2">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-3xl font-black text-white">R$ 40,00</span>
+                    <span className="text-xs font-bold text-emerald-400 uppercase">
+                      Licença Vitalícia
+                    </span>
+                  </div>
+                  <span className="text-xs text-slate-300 font-medium">
+                    Sem boleto mensal • Sem anuidade
+                  </span>
+                </div>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-200 border border-emerald-500/30 text-xs font-semibold">
+                  <Sparkles className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span>Pagamento Único • Zero Mensalidade • Entrega Digital Imediata</span>
+                </div>
+              </div>
+
               <p className="text-sm sm:text-base text-slate-300 mb-6 leading-relaxed">
-                Frente de caixa ultra-rápida para comércios com 1 Ponto de Venda. Venda em segundos com leitor de código de barras USB, emita comprovantes em bobina térmica ou PDF e elimine furos de caixa com o fechamento cego.
+                Frente de caixa ultra-rápida para comércios, mercadinhos, adegas e lojas com 1 Ponto de Venda. Venda em segundos com leitor de código de barras USB, emita comprovantes em bobina térmica ou PDF e elimine furos de caixa com o fechamento cego.
               </p>
 
               {/* Lista de Recursos Principais */}
@@ -67,7 +88,7 @@ export default function ProductCardGrid() {
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                   <span className="text-sm text-slate-200">
-                    <strong>Crediário & Carnê a Receber:</strong> venda no fiado com parcelas e recibo de quitação em PDF.
+                    <strong>Crediário &amp; Carnê a Receber:</strong> venda no fiado com parcelas e recibo de quitação em PDF.
                   </span>
                 </div>
                 <div className="flex items-start gap-3">
@@ -92,7 +113,7 @@ export default function ProductCardGrid() {
                   href="/pdv-spin"
                   className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-md shadow-emerald-900/30 text-sm"
                 >
-                  <span>Ver Módulos & Telas</span>
+                  <span>Ver Detalhes do PDV Spin (R$ 40)</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
 
@@ -131,25 +152,46 @@ export default function ProductCardGrid() {
 
             <div>
               {/* Header do Card */}
-              <div className="flex items-center justify-between gap-4 mb-6">
+              <div className="flex items-start justify-between gap-4 mb-5">
                 <div className="flex items-center gap-3.5">
-                  <div className="w-14 h-14 rounded-2xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 shadow-md">
+                  <div className="w-14 h-14 rounded-2xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 shadow-md shrink-0">
                     <Stethoscope className="w-7 h-7" />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-sky-400 uppercase tracking-wider">
-                      Consultórios & Clínicas
+                    <span className="text-xs font-bold text-sky-400 uppercase tracking-wider block">
+                      Clínica Spin • Saúde &amp; Estética
                     </span>
-                    <h3 className="text-2xl font-black text-white">{clinica.name}</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-white leading-tight">
+                      Sistema de Gestão para Clínicas e Consultórios com Pagamento Único
+                    </h3>
                   </div>
                 </div>
                 <span className="text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/30 shrink-0">
-                  v{clinica.version}
+                  v1.0.0
                 </span>
               </div>
 
+              {/* Box de Preço e Selo CRO */}
+              <div className="mb-6 p-4 rounded-2xl bg-sky-950/30 border border-sky-500/30 space-y-2">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-3xl font-black text-white">R$ 99,00</span>
+                    <span className="text-xs font-bold text-sky-400 uppercase">
+                      Licença Vitalícia (Até 2 PCs)
+                    </span>
+                  </div>
+                  <span className="text-xs text-slate-300 font-medium">
+                    Sem boleto mensal • Zero Nuvem
+                  </span>
+                </div>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/20 text-sky-200 border border-sky-500/30 text-xs font-semibold">
+                  <Sparkles className="w-3.5 h-3.5 text-sky-400 shrink-0" />
+                  <span>Pagamento Único • Zero Mensalidade • Entrega Digital Imediata</span>
+                </div>
+              </div>
+
               <p className="text-sm sm:text-base text-slate-300 mb-6 leading-relaxed">
-                Gestão clínica com prontuário eletrônico LGPD, sala de espera em tempo real e suporte a 2 computadores interligados na mesma clínica (Médico + Secretária) funcionando sem depender de internet.
+                Gestão clínica completa com prontuário eletrônico LGPD, sala de espera em tempo real e suporte a 2 computadores interligados na mesma clínica (Médico + Secretária) funcionando sem depender de internet.
               </p>
 
               {/* Lista de Recursos Principais */}
@@ -181,7 +223,7 @@ export default function ProductCardGrid() {
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-sky-400 shrink-0 mt-0.5" />
                   <span className="text-sm text-slate-200">
-                    <strong>Caixa & Repasses Médicos:</strong> cálculo de comissões por procedimento e extratos em PDF.
+                    <strong>Caixa &amp; Repasses Médicos:</strong> cálculo de comissões por procedimento e extratos em PDF.
                   </span>
                 </div>
               </div>
@@ -194,7 +236,7 @@ export default function ProductCardGrid() {
                   href="/clinica-spin"
                   className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-sky-600 hover:bg-sky-500 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-md shadow-sky-900/30 text-sm"
                 >
-                  <span>Ver Módulos & Telas</span>
+                  <span>Ver Detalhes do Clínica Spin (R$ 99)</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
 

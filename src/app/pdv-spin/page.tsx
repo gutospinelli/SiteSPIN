@@ -18,9 +18,9 @@ import { DOWNLOADS_DATA, COMPANY_CONTACT } from "@/config/downloads";
 import { PRODUCTS } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "PDV SPIN Gestão Comercial | 100% Offline e Sem Mensalidades",
+  title: "PDV Spin — Sistema PDV Frente de Caixa e Estoque Sem Mensalidade (R$ 40)",
   description:
-    "Frente de caixa rápida com leitor de código de barras USB, fechamento de caixa cego, controle de estoque com margem de lucro, QR Code PIX e crediário. 100% offline para Windows e macOS.",
+    "Sistema de Frente de Caixa (PDV), Controle de Estoque, Fechamento de Caixa Cego, QR Code PIX e Crediário com pagamento único de R$ 40,00. 100% offline e sem mensalidade.",
 };
 
 export default function PdvSpinPage() {
@@ -48,15 +48,15 @@ export default function PdvSpinPage() {
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 text-xs font-semibold">
                 <ShoppingCart className="w-3.5 h-3.5" />
-                <span>Versão 1.0 Oficial • 1 Ponto de Venda • Licença Vitalícia</span>
+                <span>Pagamento Único • Zero Mensalidade • Entrega Digital Imediata</span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl font-black text-white tracking-tight leading-tight">
-                {pdv.name}
+              <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+                PDV Spin — Sistema PDV Frente de Caixa e Estoque Sem Mensalidade
               </h1>
 
               <p className="text-lg text-emerald-300/90 font-medium">
-                {pdv.tagline}
+                {pdv.tagline} • Licença Definitiva por apenas <strong className="text-white">R$ 40,00 (Pagamento Único)</strong>
               </p>
 
               <p className="text-base text-slate-300 leading-relaxed">

@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import WhySpinSection from "@/components/WhySpinSection";
 import ProductCardGrid from "@/components/ProductCardGrid";
 import ComparisonSection from "@/components/ComparisonSection";
+import FaqSection from "@/components/FaqSection";
 import ContactSection from "@/components/ContactSection";
 
 export default function HomePage() {
@@ -12,6 +13,7 @@ export default function HomePage() {
       <WhySpinSection />
       <ProductCardGrid />
       <ComparisonSection />
+      <FaqSection />
       <ContactSection />
     </div>
   );

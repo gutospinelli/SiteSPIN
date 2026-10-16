@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, ShoppingCart, Stethoscope, Download, ShieldCheck, HardDrive, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ShoppingCart, Stethoscope, Download, ShieldCheck, HardDrive, CheckCircle2, Sparkles } from "lucide-react";
 import CopyEmailButton from "./CopyEmailButton";
 import { COMPANY_CONTACT } from "@/config/downloads";
 
@@ -25,21 +25,24 @@ export default function Hero() {
               100% Offline (Zero Nuvem)
             </span>
             <span className="text-slate-600">•</span>
-            <span className="text-sky-400 font-semibold">Sem Mensalidades</span>
+            <span className="text-sky-400 font-semibold">Pagamento Único (Sem Mensalidade)</span>
           </div>
 
-          {/* Título Principal */}
+          {/* Título Principal Otimizado para SEO e Conversão */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15]">
+            <span className="block text-xl sm:text-2xl font-bold text-indigo-400 mb-2 tracking-normal">
+              PDV Spin &amp; Clínica Spin — Sistemas Sem Mensalidade
+            </span>
             Tecnologia direta ao ponto:{" "}
             <span className="bg-gradient-to-r from-indigo-400 via-sky-300 to-emerald-400 bg-clip-text text-transparent">
-              gestão rápida, segura e sem complicação
+              gestão rápida, segura e com pagamento único
             </span>{" "}
             para o seu negócio.
           </h1>
 
           {/* Subtítulo */}
           <p className="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-3xl mx-auto">
-            Softwares definitivos para comércio e consultórios. O programa é seu de verdade, não cobra mensalidades e funciona 100% local — mesmo que a internet da sua rua caia.
+            Sistemas definitivos de Frente de Caixa (PDV), Controle de Estoque e Gestão para Clínicas e Consultórios. O programa é seu de verdade: <strong>zero mensalidades</strong> e funcionamento 100% local, mesmo se a internet cair.
           </p>
 
           {/* Botões de Ação Principal */}
@@ -49,7 +52,7 @@ export default function Hero() {
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-base px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-900/30 hover:scale-[1.02] transition-all"
             >
               <ShoppingCart className="w-5 h-5" />
-              <span>Conhecer o PDV SPIN</span>
+              <span>PDV Spin — R$ 40,00</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
 
@@ -58,7 +61,7 @@ export default function Hero() {
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 text-white font-bold text-base px-6 py-3.5 rounded-xl shadow-lg shadow-sky-900/30 hover:scale-[1.02] transition-all"
             >
               <Stethoscope className="w-5 h-5" />
-              <span>Conhecer o Clínica SPIN</span>
+              <span>Clínica Spin — R$ 99,00</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
 
@@ -75,11 +78,11 @@ export default function Hero() {
           <div className="pt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm text-slate-400 border-t border-slate-800/80 max-w-3xl mx-auto">
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              <span>Instalação autônoma em 2 minutos</span>
+              <span>Entrega Digital Imediata</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              <span>Ativação definitiva offline</span>
+              <span>Ativação vitalícia offline</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
@@ -91,51 +94,71 @@ export default function Hero() {
         {/* Mockup Comparativo Duplo */}
         <div className="mt-14 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Card Visual PDV */}
-          <div className="group relative rounded-2xl bg-gradient-to-b from-slate-800/80 to-slate-900/90 border border-emerald-500/30 p-6 shadow-xl hover:border-emerald-400/60 transition-all">
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
-                  <ShoppingCart className="w-5 h-5" />
+          <div className="group relative rounded-2xl bg-gradient-to-b from-slate-800/80 to-slate-900/90 border border-emerald-500/30 p-6 shadow-xl hover:border-emerald-400/60 transition-all flex flex-col justify-between">
+            <div>
+              <div className="flex items-start justify-between gap-3 mb-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
+                    <ShoppingCart className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h2 className="font-bold text-white text-lg leading-snug">
+                      PDV Spin — Sistema PDV Frente de Caixa e Estoque Sem Mensalidade
+                    </h2>
+                    <p className="text-xs text-emerald-400 font-medium mt-0.5">
+                      Comércio, Mercadinho, Adega, Loja de Roupas &amp; Varejo
+                    </p>
+                  </div>
                 </div>
+              </div>
+
+              {/* Bloco de Preço e Selo CRO */}
+              <div className="mb-4 p-3.5 rounded-xl bg-emerald-950/30 border border-emerald-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <div>
-                  <h3 className="font-bold text-white text-lg">PDV SPIN Comercial</h3>
-                  <p className="text-xs text-emerald-400 font-medium">Comércio, Balcão & 1 Ponto de Venda</p>
+                  <span className="text-[11px] uppercase font-bold text-emerald-300 block">
+                    Licença Definitiva Vitalícia
+                  </span>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-2xl font-black text-white">R$ 40,00</span>
+                    <span className="text-xs text-emerald-400 font-semibold">Pagamento Único</span>
+                  </div>
+                </div>
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-200 border border-emerald-500/30 text-[11px] font-semibold">
+                  <Sparkles className="w-3 h-3 text-emerald-400 shrink-0" />
+                  Pagamento Único • Zero Mensalidade • Entrega Digital Imediata
+                </span>
+              </div>
+
+              {/* Simulação Visual do Caixa */}
+              <div className="bg-slate-950 rounded-xl p-4 border border-slate-800 font-mono text-xs space-y-2 mb-4">
+                <div className="flex justify-between text-slate-400 pb-1 border-b border-slate-800">
+                  <span>[F1] FRENTE DE CAIXA</span>
+                  <span className="text-emerald-400 font-bold">CAIXA ABERTO</span>
+                </div>
+                <div className="flex justify-between text-slate-200">
+                  <span>Item: Refrigerante Lata 350ml</span>
+                  <span className="font-bold text-white">R$ 6,50</span>
+                </div>
+                <div className="flex justify-between text-slate-200">
+                  <span>Item: Salgado Forno Especial</span>
+                  <span className="font-bold text-white">R$ 9,00</span>
+                </div>
+                <div className="flex justify-between items-center pt-2 border-t border-slate-800 font-sans">
+                  <span className="text-slate-400 font-medium">Total da Venda:</span>
+                  <span className="text-lg font-black text-emerald-400">R$ 15,50</span>
+                </div>
+                <div className="flex items-center justify-between text-[11px] text-slate-400 pt-1">
+                  <span>[F4] Finalizar</span>
+                  <span className="text-emerald-400">PIX QR Code • Dinheiro • Cartão</span>
                 </div>
               </div>
-              <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">
-                v1.0 Windows/Mac
-              </span>
+
+              <p className="text-xs text-slate-300 mb-4 leading-relaxed">
+                Frente de caixa rápida com leitor USB, fechamento cego contra fraudes, controle de estoque com margem de lucro e crediário.
+              </p>
             </div>
 
-            {/* Simulação Visual do Caixa */}
-            <div className="bg-slate-950 rounded-xl p-4 border border-slate-800 font-mono text-xs space-y-2 mb-4">
-              <div className="flex justify-between text-slate-400 pb-1 border-b border-slate-800">
-                <span>[F1] FRENTE DE CAIXA</span>
-                <span className="text-emerald-400 font-bold">CAIXA ABERTO</span>
-              </div>
-              <div className="flex justify-between text-slate-200">
-                <span>Item: Refrigerante Lata 350ml</span>
-                <span className="font-bold text-white">R$ 6,50</span>
-              </div>
-              <div className="flex justify-between text-slate-200">
-                <span>Item: Salgado Forno Especial</span>
-                <span className="font-bold text-white">R$ 9,00</span>
-              </div>
-              <div className="flex justify-between items-center pt-2 border-t border-slate-800 font-sans">
-                <span className="text-slate-400 font-medium">Total da Venda:</span>
-                <span className="text-lg font-black text-emerald-400">R$ 15,50</span>
-              </div>
-              <div className="flex items-center justify-between text-[11px] text-slate-400 pt-1">
-                <span>[F4] Finalizar</span>
-                <span className="text-emerald-400">PIX QR Code • Dinheiro • Cartão</span>
-              </div>
-            </div>
-
-            <p className="text-xs text-slate-300 mb-4 leading-relaxed">
-              Frente de caixa rápida com leitor USB, fechamento cego contra fraudes, controle de estoque com margem de lucro e crediário.
-            </p>
-
-            <div className="flex items-center justify-between pt-2 border-t border-slate-800">
+            <div className="flex items-center justify-between pt-3 border-t border-slate-800">
               <Link
                 href="/pdv-spin"
                 className="text-xs font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-1"
@@ -154,51 +177,71 @@ export default function Hero() {
           </div>
 
           {/* Card Visual Clínica */}
-          <div className="group relative rounded-2xl bg-gradient-to-b from-slate-800/80 to-slate-900/90 border border-sky-500/30 p-6 shadow-xl hover:border-sky-400/60 transition-all">
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400">
-                  <Stethoscope className="w-5 h-5" />
+          <div className="group relative rounded-2xl bg-gradient-to-b from-slate-800/80 to-slate-900/90 border border-sky-500/30 p-6 shadow-xl hover:border-sky-400/60 transition-all flex flex-col justify-between">
+            <div>
+              <div className="flex items-start justify-between gap-3 mb-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 shrink-0">
+                    <Stethoscope className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h2 className="font-bold text-white text-lg leading-snug">
+                      Clínica Spin — Sistema de Gestão para Clínicas e Consultórios com Pagamento Único
+                    </h2>
+                    <p className="text-xs text-sky-400 font-medium mt-0.5">
+                      Médicos, Dentistas, Estética, Psicologia, Fisioterapia &amp; Recepção
+                    </p>
+                  </div>
                 </div>
+              </div>
+
+              {/* Bloco de Preço e Selo CRO */}
+              <div className="mb-4 p-3.5 rounded-xl bg-sky-950/30 border border-sky-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <div>
-                  <h3 className="font-bold text-white text-lg">Clínica SPIN Inteligente</h3>
-                  <p className="text-xs text-sky-400 font-medium">Médicos, Dentistas, Terapeutas & Recepção</p>
+                  <span className="text-[11px] uppercase font-bold text-sky-300 block">
+                    Licença Definitiva (Até 2 PCs)
+                  </span>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-2xl font-black text-white">R$ 99,00</span>
+                    <span className="text-xs text-sky-400 font-semibold">Pagamento Único</span>
+                  </div>
+                </div>
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-sky-500/20 text-sky-200 border border-sky-500/30 text-[11px] font-semibold">
+                  <Sparkles className="w-3 h-3 text-sky-400 shrink-0" />
+                  Pagamento Único • Zero Mensalidade • Entrega Digital Imediata
+                </span>
+              </div>
+
+              {/* Simulação Visual da Clínica */}
+              <div className="bg-slate-950 rounded-xl p-4 border border-slate-800 font-mono text-xs space-y-2 mb-4">
+                <div className="flex justify-between text-slate-400 pb-1 border-b border-slate-800">
+                  <span>SALA DE ESPERA EM TEMPO REAL</span>
+                  <span className="text-sky-400 font-bold">REDE LOCAL ATIVA</span>
+                </div>
+                <div className="flex justify-between items-center text-slate-200">
+                  <span>Ana Clara Medeiros</span>
+                  <span className="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[11px]">8 min na espera</span>
+                </div>
+                <div className="flex justify-between items-center text-slate-200">
+                  <span>Dr. Roberto Spinelli</span>
+                  <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[11px]">Consultório 01</span>
+                </div>
+                <div className="flex justify-between items-center pt-2 border-t border-slate-800 font-sans">
+                  <span className="text-slate-400 font-medium">Prontuário LGPD:</span>
+                  <span className="text-xs font-semibold text-sky-400">Sigilo Absoluto Local</span>
+                </div>
+                <div className="flex items-center justify-between text-[11px] text-slate-400 pt-1">
+                  <span>Médico + Secretária</span>
+                  <span className="text-sky-400">WhatsApp 1 Clique • Repasses</span>
                 </div>
               </div>
-              <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/30">
-                v1.0.0 Oficial
-              </span>
+
+              <p className="text-xs text-slate-300 mb-4 leading-relaxed">
+                Agenda com detecção de conflitos, sala de espera com cronômetro, prontuário com linha do tempo, WhatsApp grátis e rede local sem internet.
+              </p>
             </div>
 
-            {/* Simulação Visual da Clínica */}
-            <div className="bg-slate-950 rounded-xl p-4 border border-slate-800 font-mono text-xs space-y-2 mb-4">
-              <div className="flex justify-between text-slate-400 pb-1 border-b border-slate-800">
-                <span>SALA DE ESPERA EM TEMPO REAL</span>
-                <span className="text-sky-400 font-bold">REDE LOCAL ATIVA</span>
-              </div>
-              <div className="flex justify-between items-center text-slate-200">
-                <span>Ana Clara Medeiros</span>
-                <span className="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[11px]">8 min na espera</span>
-              </div>
-              <div className="flex justify-between items-center text-slate-200">
-                <span>Dr. Roberto Spinelli</span>
-                <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[11px]">Consultório 01</span>
-              </div>
-              <div className="flex justify-between items-center pt-2 border-t border-slate-800 font-sans">
-                <span className="text-slate-400 font-medium">Prontuário LGPD:</span>
-                <span className="text-xs font-semibold text-sky-400">Sigilo Absoluto Local</span>
-              </div>
-              <div className="flex items-center justify-between text-[11px] text-slate-400 pt-1">
-                <span>Médico + Secretária</span>
-                <span className="text-sky-400">WhatsApp 1 Clique • Repasses</span>
-              </div>
-            </div>
-
-            <p className="text-xs text-slate-300 mb-4 leading-relaxed">
-              Agenda com detecção de conflitos, sala de espera com cronômetro, prontuário com linha do tempo, WhatsApp grátis e rede local sem internet.
-            </p>
-
-            <div className="flex items-center justify-between pt-2 border-t border-slate-800">
+            <div className="flex items-center justify-between pt-3 border-t border-slate-800">
               <Link
                 href="/clinica-spin"
                 className="text-xs font-semibold text-sky-400 hover:text-sky-300 flex items-center gap-1"

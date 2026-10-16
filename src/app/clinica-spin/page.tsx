@@ -18,9 +18,9 @@ import { DOWNLOADS_DATA, COMPANY_CONTACT } from "@/config/downloads";
 import { PRODUCTS } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "Clínica SPIN Gestão Inteligente | Prontuário LGPD e Rede Local sem Internet",
+  title: "Clínica Spin — Sistema de Gestão para Clínicas e Consultórios com Pagamento Único (R$ 99)",
   description:
-    "Software para consultórios e clínicas: agenda com sala de espera ao vivo, prontuário eletrônico LGPD, suporte a 2 computadores (Médico + Secretária) sem internet e sem mensalidades.",
+    "Sistema de Gestão para Clínicas e Consultórios com Prontuário Eletrônico LGPD, Agenda Inteligente, Sala de Espera, WhatsApp em 1 Clique e Rede Local para 2 PCs sem internet. R$ 99,00 pagamento único.",
 };
 
 export default function ClinicaSpinPage() {
@@ -48,15 +48,15 @@ export default function ClinicaSpinPage() {
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/30 text-xs font-semibold">
                 <Stethoscope className="w-3.5 h-3.5" />
-                <span>Versão 1.0.0 Oficial Definitiva • Rede Local (2 PCs) • Licença Vitalícia</span>
+                <span>Pagamento Único • Zero Mensalidade • Entrega Digital Imediata</span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl font-black text-white tracking-tight leading-tight">
-                {clinica.name}
+              <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+                Clínica Spin — Sistema de Gestão para Clínicas e Consultórios com Pagamento Único
               </h1>
 
               <p className="text-lg text-sky-300/90 font-medium">
-                {clinica.tagline}
+                {clinica.tagline} • Licença Definitiva (Até 2 PCs) por <strong className="text-white">R$ 99,00 (Pagamento Único)</strong>
               </p>
 
               <p className="text-base text-slate-300 leading-relaxed">
