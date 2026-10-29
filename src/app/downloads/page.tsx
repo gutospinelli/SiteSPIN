@@ -88,7 +88,7 @@ export default function DownloadsPage() {
                       </span>
                     </td>
                     <td className="py-4 px-6 font-mono text-xs text-slate-300">1.0 Oficial</td>
-                    <td className="py-4 px-6 font-mono text-xs text-emerald-400 font-bold">8.8 MB</td>
+                    <td className="py-4 px-6 font-mono text-xs text-emerald-400 font-bold">7.0 MB</td>
                     <td className="py-4 px-6 text-right">
                       <a
                         href="/downloads/softwares/PDV-Spin-Gestao-Comercial-Windows.zip"

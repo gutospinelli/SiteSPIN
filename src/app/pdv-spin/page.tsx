@@ -82,7 +82,7 @@ export default function PdvSpinPage() {
                     </div>
                     <span className="text-sm font-black">Baixar PDV SPIN</span>
                     <span className="text-[11px] text-emerald-100/80 mt-1">
-                      Tamanho: 8.8 MB • Win 10/11
+                      Tamanho: 7.0 MB • Win 10/11
                     </span>
                   </a>
 
@@ -356,7 +356,7 @@ export default function PdvSpinPage() {
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-emerald-900/30 transition-all text-sm"
             >
               <Download className="w-4 h-4" />
-              <span>Baixar Software PDV SPIN (Windows 8.8 MB)</span>
+              <span>Baixar Software PDV SPIN (Windows 7.0 MB)</span>
             </a>
 
             <a

@@ -171,7 +171,7 @@ export default function Hero() {
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold"
               >
                 <Download className="w-3.5 h-3.5" />
-                <span>Baixar ZIP (8.8 MB)</span>
+                <span>Baixar ZIP (7.0 MB)</span>
               </a>
             </div>
           </div>

@@ -123,7 +123,7 @@ export default function ProductCardGrid() {
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold py-3 px-4 rounded-xl transition-all text-sm"
                 >
                   <Download className="w-4 h-4 text-emerald-400" />
-                  <span>Baixar ZIP (8.8 MB)</span>
+                  <span>Baixar ZIP (7.0 MB)</span>
                 </a>
               </div>
 

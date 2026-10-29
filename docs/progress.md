@@ -1,7 +1,7 @@
 # Progresso de Desenvolvimento do Portal SPIN - Software Prático e Inteligente
 
 - **URL Oficial de Produção (Vercel):** [https://sitespin.vercel.app](https://sitespin.vercel.app)
-- **URL Específica do Deploy:** [https://sitespin-bcniwg0bk-spinelli1.vercel.app](https://sitespin-bcniwg0bk-spinelli1.vercel.app)
+- **URL Específica do Deploy (SEO + CRO):** [https://sitespin-3qlkg7c4p-spinelli1.vercel.app](https://sitespin-3qlkg7c4p-spinelli1.vercel.app)
 - **Conta Vercel:** `spinelli1`
 - **E-mail Oficial:** `spinsoftwareinteligente@gmail.com`
 - **Status Geral:** 100% Concluído e Validado em Produção (Zero Erros)
@@ -33,6 +33,6 @@
 | `https://sitespin.vercel.app/manuais/clinica-spin` | **200 OK** | Manual online interativo do Clínica SPIN |
 | `https://sitespin.vercel.app/downloads/manuais/manual-pdv-spin.pdf` | **200 OK** | Manual oficial PDF PDV (2.47 MB) |
 | `https://sitespin.vercel.app/downloads/manuais/manual-clinica-spin.pdf` | **200 OK** | Manual oficial PDF Clínica (2.00 MB) |
-| `https://sitespin.vercel.app/downloads/softwares/PDV-Spin-Gestao-Comercial-Windows.zip` | **200 OK** | Instalador Windows PDV (8.84 MB) |
+| `https://sitespin.vercel.app/downloads/softwares/PDV-Spin-Gestao-Comercial-Windows.zip` | **200 OK** | Instalador Windows PDV (7.02 MB) |
 | `https://sitespin.vercel.app/downloads/softwares/PDV-Spin-macOS.zip` | **200 OK** | Instalador macOS PDV (6.23 MB) |
 | `https://sitespin.vercel.app/downloads/softwares/Clinica-Spin-Setup-1.0.0.exe` | **200 OK** | Instalador Windows Clínica (87.20 MB) |
