@@ -33,6 +33,6 @@
 | `https://sitespin.vercel.app/manuais/clinica-spin` | **200 OK** | Manual online interativo do Clínica SPIN |
 | `https://sitespin.vercel.app/downloads/manuais/manual-pdv-spin.pdf` | **200 OK** | Manual oficial PDF PDV (2.47 MB) |
 | `https://sitespin.vercel.app/downloads/manuais/manual-clinica-spin.pdf` | **200 OK** | Manual oficial PDF Clínica (2.00 MB) |
-| `https://sitespin.vercel.app/downloads/softwares/PDV-Spin-Gestao-Comercial-Windows.zip` | **200 OK** | Instalador Windows PDV (7.02 MB) |
-| `https://sitespin.vercel.app/downloads/softwares/PDV-Spin-macOS.zip` | **200 OK** | Instalador macOS PDV (6.23 MB) |
+| `https://sitespin.vercel.app/downloads/softwares/PDV-Spin-Gestao-Comercial-Windows.zip` | **200 OK** | Instalador Windows PDV (7.03 MB) |
+| `https://sitespin.vercel.app/downloads/softwares/PDV-Spin-macOS.zip` | **200 OK** | Instalador macOS PDV (6.24 MB) |
 | `https://sitespin.vercel.app/downloads/softwares/Clinica-Spin-Setup-1.0.0.exe` | **200 OK** | Instalador Windows Clínica (87.20 MB) |
