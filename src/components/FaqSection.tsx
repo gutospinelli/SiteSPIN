@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { HelpCircle, ChevronDown, ShieldCheck, Sparkles } from "lucide-react";
+import { ChevronDown, ShieldCheck } from "lucide-react";
 
 const faqItems = [
   {
@@ -44,32 +44,33 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-20 bg-slate-900/50 border-t border-slate-800">
+    <section id="faq" className="py-20 bg-canvas border-b border-border-subtle">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-4 mb-14">
-          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-indigo-400 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20">
-            <Sparkles className="w-3.5 h-3.5" />
-            Tire Suas Dúvidas
+        <div className="space-y-3 mb-12">
+          <span className="font-mono text-xs sm:text-sm text-accent-lime block">
+            {"// "}perguntas frequentes
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-ink tracking-tight">
             Perguntas Frequentes sobre Licença Vitalícia e Pagamento Único
           </h2>
-          <p className="text-slate-400 text-base leading-relaxed max-w-2xl mx-auto">
-            Tudo o que você precisa saber antes de adquirir o <strong>PDV Spin (R$ 40,00)</strong> ou o{" "}
-            <strong>Clínica Spin (R$ 99,00)</strong> com entrega digital imediata.
+          <p className="text-ink-muted text-base leading-relaxed max-w-2xl">
+            Tudo o que você precisa saber antes de adquirir o{" "}
+            <strong className="text-ink">PDV Spin (R$ 40,00)</strong> ou o{" "}
+            <strong className="text-ink">Clínica Spin (R$ 99,00)</strong> com entrega digital imediata.
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3.5">
           {faqItems.map((item, idx) => {
             const isOpen = openIndex === idx;
+            const num = String(idx + 1).padStart(2, "0");
             return (
               <div
                 key={idx}
-                className={`rounded-2xl border transition-all ${
+                className={`rounded-2xl border transition-colors bg-surface ${
                   isOpen
-                    ? "bg-slate-950 border-indigo-500/40 shadow-lg"
-                    : "bg-slate-950/70 border-slate-800 hover:border-slate-700"
+                    ? "border-accent-lime/60"
+                    : "border-border-subtle hover:border-border-subtle/80"
                 }`}
               >
                 <button
@@ -77,25 +78,23 @@ export default function FaqSection() {
                   onClick={() => toggleIndex(idx)}
                   className="w-full p-6 text-left flex items-center justify-between gap-4 cursor-pointer"
                 >
-                  <div className="flex items-start gap-3">
-                    <HelpCircle
-                      className={`w-5 h-5 shrink-0 mt-0.5 ${
-                        isOpen ? "text-indigo-400" : "text-slate-400"
-                      }`}
-                    />
-                    <h3 className="text-base sm:text-lg font-bold text-white">
+                  <div className="flex items-start gap-4">
+                    <span className="font-mono text-sm font-bold text-accent-lime mt-0.5 shrink-0">
+                      {num}
+                    </span>
+                    <h3 className="text-base sm:text-lg font-bold text-ink">
                       {item.question}
                     </h3>
                   </div>
                   <ChevronDown
-                    className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200 ${
-                      isOpen ? "rotate-180 text-indigo-400" : ""
+                    className={`w-5 h-5 text-ink-subtle shrink-0 transition-transform duration-200 ${
+                      isOpen ? "rotate-180 text-accent-lime" : ""
                     }`}
                   />
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pl-14 text-sm text-slate-300 leading-relaxed border-t border-slate-900 pt-4">
+                  <div className="px-6 pb-6 pl-14 text-sm text-ink-muted leading-relaxed border-t border-border-subtle pt-4">
                     {item.answer}
                   </div>
                 )}
@@ -105,22 +104,22 @@ export default function FaqSection() {
         </div>
 
         {/* Selo de Garantia no Rodapé do FAQ */}
-        <div className="mt-10 p-6 rounded-2xl bg-gradient-to-r from-emerald-950/30 via-slate-900 to-sky-950/30 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <div className="flex items-center gap-3.5">
-            <div className="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
+        <div className="mt-10 p-6 rounded-2xl bg-surface border border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <div className="flex items-center gap-4">
+            <div className="w-11 h-11 rounded-full bg-accent-amber flex items-center justify-center text-canvas shrink-0">
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-sm font-bold text-white">
-                Compra 100% Segura • Pagamento Único • Zero Mensalidade
+              <h4 className="text-sm font-bold text-ink">
+                <span className="text-accent-amber">Garantia:</span> Compra 100% Segura · Pagamento Único · Zero Mensalidade
               </h4>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-ink-muted mt-0.5">
                 Licença vitalícia com entrega digital imediata e suporte direto com nossos desenvolvedores.
               </p>
             </div>
           </div>
-          <span className="text-xs font-bold px-3.5 py-1.5 rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/30 shrink-0">
-            PDV R$ 40 • Clínica R$ 99
+          <span className="font-mono text-xs font-extrabold px-4 py-1.5 rounded-full bg-accent-lime text-canvas shrink-0">
+            PDV R$ 40 · Clínica R$ 99
           </span>
         </div>
       </div>

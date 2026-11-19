@@ -32,32 +32,36 @@ export default function ClinicaModulesTabs() {
     <div className="space-y-8">
       {/* Abas Superiores Desktop */}
       <div className="hidden lg:grid grid-cols-6 gap-3">
-        {clinica.modules.map((mod) => {
+        {clinica.modules.map((mod, idx) => {
           const Icon = iconMap[mod.icon] || Stethoscope;
           const isActive = mod.id === activeModuleId;
+          const num = String(idx + 1).padStart(2, "0");
           return (
             <button
               key={mod.id}
               type="button"
               onClick={() => setActiveModuleId(mod.id)}
-              className={`p-4 rounded-xl text-left border transition-all cursor-pointer flex flex-col justify-between ${
+              className={`p-4 rounded-2xl text-left border transition-colors cursor-pointer flex flex-col justify-between ${
                 isActive
-                  ? "bg-slate-900 border-sky-500 shadow-lg shadow-sky-950/40 -translate-y-1"
-                  : "bg-slate-950/70 border-slate-800 hover:border-slate-700 text-slate-400 hover:text-slate-200"
+                  ? "bg-surface border-accent-violet"
+                  : "bg-surface/60 border-border-subtle hover:border-accent-violet/40 text-ink-muted hover:text-ink"
               }`}
             >
-              <div
-                className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${
-                  isActive
-                    ? "bg-sky-500/10 text-sky-400 border border-sky-500/30"
-                    : "bg-slate-900 text-slate-400 border border-slate-800"
-                }`}
-              >
-                <Icon className="w-5 h-5" />
+              <div className="flex items-center justify-between mb-3">
+                <div
+                  className={`w-9 h-9 rounded-full flex items-center justify-center ${
+                    isActive
+                      ? "bg-accent-violet text-canvas"
+                      : "bg-canvas text-ink-muted border border-border-subtle"
+                  }`}
+                >
+                  <Icon className="w-4 h-4" />
+                </div>
+                <span className="font-mono text-xs font-bold text-accent-violet/80">{num}</span>
               </div>
               <div>
-                <span className="text-xs font-bold block text-white">{mod.tabTitle}</span>
-                <span className="text-[11px] text-slate-400 line-clamp-1">{mod.title}</span>
+                <span className="text-xs font-bold block text-ink">{mod.tabTitle}</span>
+                <span className="text-[11px] text-ink-subtle line-clamp-1">{mod.title}</span>
               </div>
             </button>
           );
@@ -75,8 +79,8 @@ export default function ClinicaModulesTabs() {
               onClick={() => setActiveModuleId(mod.id)}
               className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap border shrink-0 transition-all ${
                 isActive
-                  ? "bg-sky-600 text-white border-sky-500"
-                  : "bg-slate-900 text-slate-300 border-slate-800"
+                  ? "bg-accent-violet text-canvas border-accent-violet"
+                  : "bg-surface text-ink-muted border-border-subtle"
               }`}
             >
               {mod.tabTitle}
@@ -86,37 +90,37 @@ export default function ClinicaModulesTabs() {
       </div>
 
       {/* Conteúdo Detalhado do Módulo */}
-      <div className="rounded-3xl bg-slate-900/90 border border-slate-800 p-6 sm:p-10 shadow-2xl relative">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+      <div className="rounded-2xl bg-surface border border-border-subtle p-6 sm:p-10">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-border-subtle">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 shrink-0">
-              <ActiveIcon className="w-7 h-7" />
+            <div className="w-12 h-12 rounded-full bg-accent-violet flex items-center justify-center text-canvas shrink-0">
+              <ActiveIcon className="w-6 h-6" />
             </div>
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-sky-400">
-                Módulo Integrado • Clínica SPIN
+              <span className="font-mono text-xs text-accent-violet block">
+                {"// "}módulo integrado · clínica spin
               </span>
-              <h3 className="text-2xl font-black text-white">{activeModule.title}</h3>
-              <p className="text-sm text-slate-400">{activeModule.subtitle}</p>
+              <h3 className="text-2xl font-extrabold text-ink">{activeModule.title}</h3>
+              <p className="text-sm text-ink-muted">{activeModule.subtitle}</p>
             </div>
           </div>
         </div>
 
-        <div className="py-6">
-          <p className="text-slate-300 text-base leading-relaxed mb-6">
+        <div className="pt-6">
+          <p className="text-ink-muted text-base leading-relaxed mb-6">
             {activeModule.description}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Lista de Recursos */}
             <div className="space-y-3">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                Rotinas Operacionais no Consultório:
+              <h4 className="font-mono text-xs font-semibold text-ink-subtle uppercase tracking-wider">
+                Rotinas Operacionais no Consultório
               </h4>
               <ul className="space-y-2.5">
                 {activeModule.bulletPoints.map((point, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm text-slate-200">
-                    <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                  <li key={idx} className="flex items-start gap-3 text-sm text-ink">
+                    <CheckCircle2 className="w-4 h-4 text-accent-violet shrink-0 mt-0.5" />
                     <span>{point}</span>
                   </li>
                 ))}
@@ -124,14 +128,14 @@ export default function ClinicaModulesTabs() {
             </div>
 
             {/* Destaques Técnicos do Manual */}
-            <div className="space-y-3 bg-slate-950/60 p-5 rounded-2xl border border-slate-800">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-sky-400">
-                Segurança, LGPD e Especificações Oficiais:
+            <div className="space-y-3 bg-canvas p-5 rounded-2xl border border-border-subtle">
+              <h4 className="font-mono text-xs font-semibold text-accent-violet">
+                {"// "}segurança, lgpd e especificações oficiais
               </h4>
-              <ul className="space-y-2 text-xs text-slate-300">
+              <ul className="space-y-2 text-xs text-ink-muted">
                 {activeModule.technicalPoints.map((tech, idx) => (
                   <li key={idx} className="flex items-start gap-2">
-                    <span className="text-sky-400 font-bold">•</span>
+                    <span className="text-accent-mint font-mono font-bold">·</span>
                     <span>{tech}</span>
                   </li>
                 ))}

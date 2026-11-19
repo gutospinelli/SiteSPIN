@@ -2,7 +2,17 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Menu, X, ShoppingCart, Stethoscope, Download, BookOpen, Mail, Sparkles, ArrowRight } from "lucide-react";
+import {
+  Menu,
+  X,
+  ShoppingCart,
+  Stethoscope,
+  Download,
+  BookOpen,
+  Mail,
+  Sparkles,
+  ArrowRight,
+} from "lucide-react";
 import CopyEmailButton from "./CopyEmailButton";
 import { COMPANY_CONTACT } from "@/config/downloads";
 
@@ -10,81 +20,80 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-slate-950/90 backdrop-blur-md border-b border-slate-800 transition-all">
+    <header className="sticky top-0 z-50 w-full bg-canvas/90 backdrop-blur-md border-b border-border-subtle transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo da SPIN */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-indigo-600 via-blue-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform">
-              <span className="text-white font-black text-xl tracking-wider">S</span>
+            <div className="relative w-10 h-10 rounded-xl bg-accent-lime flex items-center justify-center group-hover:scale-105 transition-transform">
+              <span className="text-canvas font-extrabold text-xl tracking-tight">S</span>
+              <span className="absolute -bottom-1 -right-1 w-3 h-3 rounded-full bg-accent-violet border-2 border-canvas" />
             </div>
             <div className="flex flex-col">
-              <div className="flex items-center gap-1.5">
-                <span className="text-xl font-extrabold text-white tracking-tight">SPIN</span>
-                <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-                  Offline & Vitalício
+              <div className="flex items-center gap-2">
+                <span className="text-xl font-extrabold text-ink tracking-tight">SPIN</span>
+                <span className="font-mono text-[11px] font-medium text-accent-lime hidden xl:inline whitespace-nowrap">
+                  {"// "}offline &amp; vitalício
                 </span>
               </div>
-              <span className="text-[11px] text-slate-400 font-medium tracking-wide">
+              <span className="text-[11px] text-ink-subtle font-medium tracking-wide whitespace-nowrap">
                 Software Prático e Inteligente
               </span>
             </div>
           </Link>
 
           {/* Navegação Desktop */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1.5">
             <Link
               href="/#sobre"
-              className="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg transition-colors"
+              className="px-2.5 xl:px-3 py-2 text-sm font-medium text-ink-muted hover:text-ink hover:bg-surface rounded-lg transition-colors whitespace-nowrap"
             >
               A Empresa
             </Link>
             <Link
               href="/pdv-spin"
-              className="px-3 py-2 text-sm font-medium text-emerald-400 hover:text-emerald-300 hover:bg-emerald-950/40 rounded-lg transition-colors flex items-center gap-1.5"
+              className="px-2.5 xl:px-3 py-2 text-sm font-semibold text-accent-lime hover:bg-surface rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap"
             >
-              <ShoppingCart className="w-4 h-4 text-emerald-400" />
+              <ShoppingCart className="w-4 h-4 text-accent-lime shrink-0" />
               PDV SPIN
             </Link>
             <Link
               href="/clinica-spin"
-              className="px-3 py-2 text-sm font-medium text-sky-400 hover:text-sky-300 hover:bg-sky-950/40 rounded-lg transition-colors flex items-center gap-1.5"
+              className="px-2.5 xl:px-3 py-2 text-sm font-semibold text-accent-violet hover:bg-surface rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap"
             >
-              <Stethoscope className="w-4 h-4 text-sky-400" />
+              <Stethoscope className="w-4 h-4 text-accent-violet shrink-0" />
               Clínica SPIN
             </Link>
             <Link
               href="/downloads"
-              className="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg transition-colors flex items-center gap-1.5"
+              className="px-2.5 xl:px-3 py-2 text-sm font-medium text-ink-muted hover:text-ink hover:bg-surface rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap"
             >
-              <Download className="w-4 h-4 text-slate-400" />
+              <Download className="w-4 h-4 text-ink-subtle shrink-0" />
               Downloads
             </Link>
-            <div className="relative group">
-              <Link
-                href="/downloads#manuais"
-                className="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg transition-colors flex items-center gap-1.5"
-              >
-                <BookOpen className="w-4 h-4 text-slate-400" />
-                Manuais
-              </Link>
-            </div>
+            <Link
+              href="/downloads#manuais"
+              className="px-2.5 xl:px-3 py-2 text-sm font-medium text-ink-muted hover:text-ink hover:bg-surface rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap"
+            >
+              <BookOpen className="w-4 h-4 text-ink-subtle shrink-0" />
+              Manuais
+            </Link>
             <Link
               href="/#contato"
-              className="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg transition-colors"
+              className="px-2.5 xl:px-3 py-2 text-sm font-medium text-ink-muted hover:text-ink hover:bg-surface rounded-lg transition-colors whitespace-nowrap"
             >
               Contato
             </Link>
           </nav>
 
           {/* Ações Desktop */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2.5 shrink-0">
             <CopyEmailButton variant="secondary" />
             <a
               href={COMPANY_CONTACT.mailtoCommercial}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white text-sm font-semibold px-4 py-2.5 rounded-lg shadow-md shadow-indigo-600/25 transition-all"
+              className="inline-flex items-center gap-2 bg-accent-lime hover:brightness-110 text-canvas text-sm font-bold px-4 py-2.5 rounded-xl transition-all whitespace-nowrap shrink-0"
             >
-              <Mail className="w-4 h-4" />
+              <Mail className="w-4 h-4 shrink-0" />
               <span>Fale Conosco</span>
             </a>
           </div>
@@ -94,7 +103,7 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none"
+              className="p-2 rounded-lg text-ink-muted hover:text-ink hover:bg-surface focus:outline-none"
               aria-label="Abrir menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -105,81 +114,81 @@ export default function Header() {
 
       {/* Menu Mobile */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-slate-900 border-b border-slate-800 px-4 pt-3 pb-6 space-y-3 animate-in slide-in-from-top-2">
+        <div className="lg:hidden bg-surface border-b border-border-subtle px-4 pt-3 pb-6 space-y-3">
           <nav className="flex flex-col gap-1.5">
             <Link
               href="/#sobre"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2.5 text-base font-medium text-slate-200 hover:bg-slate-800 rounded-lg"
+              className="px-3 py-2.5 text-base font-medium text-ink hover:bg-surface-elevated rounded-xl"
             >
-              A Empresa & Filosofia
+              A Empresa &amp; Filosofia
             </Link>
             <Link
               href="/pdv-spin"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2.5 text-base font-medium text-emerald-400 hover:bg-emerald-950/40 rounded-lg flex items-center justify-between"
+              className="px-3 py-2.5 text-base font-semibold text-accent-lime hover:bg-surface-elevated rounded-xl flex items-center justify-between"
             >
               <span className="flex items-center gap-2">
-                <ShoppingCart className="w-5 h-5 text-emerald-400" />
+                <ShoppingCart className="w-5 h-5 text-accent-lime" />
                 PDV SPIN Gestão Comercial
               </span>
-              <ArrowRight className="w-4 h-4 text-emerald-400" />
+              <ArrowRight className="w-4 h-4 text-accent-lime" />
             </Link>
             <Link
               href="/clinica-spin"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2.5 text-base font-medium text-sky-400 hover:bg-sky-950/40 rounded-lg flex items-center justify-between"
+              className="px-3 py-2.5 text-base font-semibold text-accent-violet hover:bg-surface-elevated rounded-xl flex items-center justify-between"
             >
               <span className="flex items-center gap-2">
-                <Stethoscope className="w-5 h-5 text-sky-400" />
+                <Stethoscope className="w-5 h-5 text-accent-violet" />
                 Clínica SPIN Gestão Inteligente
               </span>
-              <ArrowRight className="w-4 h-4 text-sky-400" />
+              <ArrowRight className="w-4 h-4 text-accent-violet" />
             </Link>
             <Link
               href="/downloads"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2.5 text-base font-medium text-slate-200 hover:bg-slate-800 rounded-lg flex items-center gap-2"
+              className="px-3 py-2.5 text-base font-medium text-ink hover:bg-surface-elevated rounded-xl flex items-center gap-2"
             >
-              <Download className="w-5 h-5 text-indigo-400" />
+              <Download className="w-5 h-5 text-accent-mint" />
               Central de Downloads
             </Link>
-            <div className="pl-4 py-1 flex flex-col gap-1 border-l-2 border-slate-700 my-1">
+            <div className="pl-4 py-1 flex flex-col gap-1 border-l-2 border-border-subtle my-1">
               <Link
                 href="/manuais/pdv-spin"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-sm text-slate-300 hover:text-emerald-400 py-1"
+                className="text-sm text-ink-muted hover:text-accent-lime py-1 font-mono"
               >
-                • Manual Online PDV SPIN
+                {"// "}Manual Online PDV SPIN
               </Link>
               <Link
                 href="/manuais/clinica-spin"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-sm text-slate-300 hover:text-sky-400 py-1"
+                className="text-sm text-ink-muted hover:text-accent-violet py-1 font-mono"
               >
-                • Manual Online Clínica SPIN
+                {"// "}Manual Online Clínica SPIN
               </Link>
             </div>
             <Link
               href="/#contato"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2.5 text-base font-medium text-slate-200 hover:bg-slate-800 rounded-lg flex items-center gap-2"
+              className="px-3 py-2.5 text-base font-medium text-ink hover:bg-surface-elevated rounded-xl flex items-center gap-2"
             >
-              <Mail className="w-5 h-5 text-blue-400" />
+              <Mail className="w-5 h-5 text-accent-lime" />
               Contato Comercial
             </Link>
           </nav>
 
-          <div className="pt-3 border-t border-slate-800 flex flex-col gap-2.5">
-            <div className="p-3 bg-slate-950 rounded-lg border border-slate-800 flex items-center justify-between">
-              <span className="text-xs text-slate-400 font-mono truncate mr-2">
+          <div className="pt-3 border-t border-border-subtle flex flex-col gap-2.5">
+            <div className="p-3 bg-canvas rounded-xl border border-border-subtle flex items-center justify-between">
+              <span className="text-xs text-ink-muted font-mono truncate mr-2">
                 {COMPANY_CONTACT.email}
               </span>
               <CopyEmailButton variant="pill" showIcon={false} />
             </div>
             <a
               href={COMPANY_CONTACT.mailtoCommercial}
-              className="w-full text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2.5 rounded-lg flex items-center justify-center gap-2 text-sm"
+              className="w-full text-center bg-accent-lime hover:brightness-110 text-canvas font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 text-sm"
             >
               <Sparkles className="w-4 h-4" />
               <span>Enviar Mensagem Comercial</span>

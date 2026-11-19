@@ -33,26 +33,26 @@ export default function PdvManualPage() {
   ];
 
   return (
-    <div className="bg-slate-950 text-slate-100 min-h-screen py-10 sm:py-14">
+    <div className="bg-canvas text-ink min-h-screen py-10 sm:py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Barra Superior / Breadcrumb & Ações */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-8 border-b border-slate-800">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-8 border-b border-border-subtle">
           <div>
-            <div className="flex items-center gap-2 text-xs text-slate-400 mb-2">
-              <Link href="/" className="hover:text-emerald-400">
+            <div className="flex items-center gap-2 text-xs text-ink-subtle mb-2">
+              <Link href="/" className="hover:text-accent-lime">
                 Início
               </Link>
               <span>/</span>
-              <Link href="/downloads" className="hover:text-emerald-400">
+              <Link href="/downloads" className="hover:text-accent-lime">
                 Downloads
               </Link>
               <span>/</span>
-              <span className="text-emerald-400 font-medium">Manual Online PDV SPIN</span>
+              <span className="text-accent-lime font-medium">Manual Online PDV SPIN</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-white">
+            <h1 className="text-2xl sm:text-3xl font-black text-ink">
               Manual Oficial do Usuário & Guia de Operação
             </h1>
-            <p className="text-xs sm:text-sm text-slate-400">
+            <p className="text-xs sm:text-sm text-ink-subtle">
               PDV SPIN GESTÃO COMERCIAL • Versão 1.0 • Licença Vitalícia Offline
             </p>
           </div>
@@ -62,7 +62,7 @@ export default function PdvManualPage() {
             <a
               href={pdvDownloads.manual.url}
               download
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-950/30 transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-accent-lime hover:brightness-110 text-canvas font-bold text-xs font-bold  transition-all"
             >
               <Download className="w-4 h-4" />
               <span>Baixar PDF ({pdvDownloads.manual.sizeFormatted})</span>
@@ -74,10 +74,10 @@ export default function PdvManualPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mt-10">
           {/* Sumário Lateral Fixo */}
           <aside className="lg:col-span-4 xl:col-span-3">
-            <div className="sticky top-28 p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-4">
-              <div className="flex items-center gap-2 pb-3 border-b border-slate-800">
-                <BookOpen className="w-4 h-4 text-emerald-400" />
-                <span className="text-xs font-bold uppercase tracking-wider text-white">
+            <div className="sticky top-28 p-5 rounded-2xl bg-surface border border-border-subtle space-y-4">
+              <div className="flex items-center gap-2 pb-3 border-b border-border-subtle">
+                <BookOpen className="w-4 h-4 text-accent-lime" />
+                <span className="text-xs font-bold uppercase tracking-wider text-ink">
                   Sumário do Manual
                 </span>
               </div>
@@ -87,19 +87,19 @@ export default function PdvManualPage() {
                   <a
                     key={chap.id}
                     href={`#${chap.id}`}
-                    className="block px-3 py-2 rounded-lg text-slate-400 hover:text-emerald-400 hover:bg-slate-800/60 transition-colors"
+                    className="block px-3 py-2 rounded-lg text-ink-subtle hover:text-accent-lime hover:bg-surface-elevated transition-colors"
                   >
                     {chap.title}
                   </a>
                 ))}
               </nav>
 
-              <div className="pt-4 border-t border-slate-800 text-[11px] text-slate-400 space-y-2">
+              <div className="pt-4 border-t border-border-subtle text-[11px] text-ink-subtle space-y-2">
                 <p>
                   Suporte direto:{" "}
                   <a
                     href={COMPANY_CONTACT.mailtoSupportPdv}
-                    className="text-emerald-400 hover:underline font-mono"
+                    className="text-accent-lime hover:underline font-mono"
                   >
                     {COMPANY_CONTACT.email}
                   </a>
@@ -109,14 +109,14 @@ export default function PdvManualPage() {
           </aside>
 
           {/* Conteúdo Textual Completo */}
-          <main className="lg:col-span-8 xl:col-span-9 space-y-14 text-slate-300 text-sm leading-relaxed">
+          <main className="lg:col-span-8 xl:col-span-9 space-y-14 text-ink-muted text-sm leading-relaxed">
             {/* Introdução */}
-            <div className="p-6 sm:p-8 rounded-3xl bg-slate-900 border border-emerald-500/30 space-y-4">
-              <div className="flex items-center gap-2 text-xs font-bold text-emerald-400 uppercase tracking-wider">
+            <div className="p-6 sm:p-8 rounded-3xl bg-surface border border-accent-lime/40 space-y-4">
+              <div className="flex items-center gap-2 text-xs font-bold text-accent-lime uppercase tracking-wider">
                 <ShieldCheck className="w-4 h-4" />
                 <span>O Software é Seu de Verdade!</span>
               </div>
-              <h2 className="text-xl sm:text-2xl font-bold text-white">
+              <h2 className="text-xl sm:text-2xl font-bold text-ink">
                 Seja bem-vindo ao PDV SPIN Gestão Comercial!
               </h2>
               <p>
@@ -125,37 +125,37 @@ export default function PdvManualPage() {
             </div>
 
             {/* Capítulo 1 */}
-            <section id="cap1" className="space-y-4 pt-6 border-t border-slate-800">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+            <section id="cap1" className="space-y-4 pt-6 border-t border-border-subtle">
+              <span className="text-xs font-bold uppercase tracking-wider text-accent-lime">
                 Capítulo 1
               </span>
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-ink">
                 Instalação no Windows & O Aviso SmartScreen Descomplicado
               </h2>
               <p>
                 O PDV SPIN foi arquitetado para ser extremamente leve e direto. Ele não exige a instalação de bancos de dados pesados (como MySQL ou SQL Server) nem a configuração de servidores na sua rede.
               </p>
 
-              <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2">
-                <h3 className="font-bold text-white text-base">1.1 Como Descompactar e Executar no Windows:</h3>
-                <ol className="list-decimal pl-5 space-y-1.5 text-slate-300">
-                  <li>Após baixar o arquivo <code className="text-emerald-400 font-mono">PDV-Spin-Gestao-Comercial-Windows.zip</code>, clique com o botão direito nele e escolha &quot;Extrair Tudo...&quot;.</li>
-                  <li>Dentro da pasta extraída, você verá o executável <code className="text-emerald-400 font-mono">pdvspin.exe</code> e o arquivo <code className="text-emerald-400 font-mono">Instalar-Atalho.bat</code>.</li>
-                  <li>Dê dois cliques no arquivo <code className="text-emerald-400 font-mono">Instalar-Atalho.bat</code> para criar automaticamente o ícone do PDV SPIN na sua Área de Trabalho.</li>
+              <div className="p-5 rounded-2xl bg-surface border border-border-subtle space-y-2">
+                <h3 className="font-bold text-ink text-base">1.1 Como Descompactar e Executar no Windows:</h3>
+                <ol className="list-decimal pl-5 space-y-1.5 text-ink-muted">
+                  <li>Após baixar o arquivo <code className="text-accent-lime font-mono">PDV-Spin-Gestao-Comercial-Windows.zip</code>, clique com o botão direito nele e escolha &quot;Extrair Tudo...&quot;.</li>
+                  <li>Dentro da pasta extraída, você verá o executável <code className="text-accent-lime font-mono">pdvspin.exe</code> e o arquivo <code className="text-accent-lime font-mono">Instalar-Atalho.bat</code>.</li>
+                  <li>Dê dois cliques no arquivo <code className="text-accent-lime font-mono">Instalar-Atalho.bat</code> para criar automaticamente o ícone do PDV SPIN na sua Área de Trabalho.</li>
                   <li>Dê dois cliques no ícone para abrir o sistema!</li>
                 </ol>
               </div>
 
-              <div className="p-5 rounded-2xl bg-slate-900 border border-amber-500/30 space-y-2">
-                <h3 className="font-bold text-amber-300 text-base">1.2 Entendendo o Aviso do Windows Defender SmartScreen:</h3>
+              <div className="p-5 rounded-2xl bg-surface border border-accent-amber/40 space-y-2">
+                <h3 className="font-bold text-accent-amber text-base">1.2 Entendendo o Aviso do Windows Defender SmartScreen:</h3>
                 <p>
                   Ao abrir o programa pela primeira vez em alguns computadores com Windows 10 ou 11, o Windows pode exibir uma tela azul dizendo: <em>&quot;O Windows protegeu o seu computador&quot;</em>.
                 </p>
                 <p>
                   <strong>Por que isso acontece?</strong> A Microsoft cobra taxas anuais de milhares de reais para validar certificados digitais em programas novos. Sistemas comerciais que pagam isso repassam esse custo cobrando mensalidades de R$ 80 a R$ 200 por mês de você. Como o PDV SPIN é vendido sem mensalidades e funciona 100% offline, ele é 100% limpo e seguro.
                 </p>
-                <div className="p-3 rounded-xl bg-slate-950 border border-amber-500/20 font-sans space-y-1 text-xs">
-                  <div className="font-bold text-white">Como liberar em 2 cliques rápidos:</div>
+                <div className="p-3 rounded-xl bg-canvas border border-accent-amber/30 font-sans space-y-1 text-xs">
+                  <div className="font-bold text-ink">Como liberar em 2 cliques rápidos:</div>
                   <div>1. Na tela azul do Windows, clique no link <strong>&quot;Mais informações&quot;</strong>.</div>
                   <div>2. Em seguida, clique no botão <strong>&quot;Executar assim mesmo&quot;</strong>.</div>
                   <div>3. Pronto! O sistema abre na hora e o Windows nunca mais repetirá esse aviso nessa máquina.</div>
@@ -164,44 +164,44 @@ export default function PdvManualPage() {
             </section>
 
             {/* Capítulo 2 */}
-            <section id="cap2" className="space-y-4 pt-6 border-t border-slate-800">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+            <section id="cap2" className="space-y-4 pt-6 border-t border-border-subtle">
+              <span className="text-xs font-bold uppercase tracking-wider text-accent-lime">
                 Capítulo 2
               </span>
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-ink">
                 Ativação Permanente e Primeiro Login
               </h2>
               <p>
                 Na primeira inicialização, o sistema exibirá a janela de ativação vitalícia. Você <strong>não precisa</strong> de conexão com a internet para ativar.
               </p>
-              <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
-                <h3 className="font-bold text-white text-base">Preencha os três campos enviados na sua compra:</h3>
+              <div className="p-5 rounded-2xl bg-surface border border-border-subtle space-y-3">
+                <h3 className="font-bold text-ink text-base">Preencha os três campos enviados na sua compra:</h3>
                 <ul className="space-y-1.5 list-disc pl-5">
-                  <li><strong>Chave de Licença (25 dígitos):</strong> Cole sua chave no formato <code className="font-mono text-emerald-400">XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</code>.</li>
+                  <li><strong>Chave de Licença (25 dígitos):</strong> Cole sua chave no formato <code className="font-mono text-accent-lime">XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</code>.</li>
                   <li><strong>CPF ou CNPJ do Titular:</strong> O documento informado no momento da compra.</li>
                   <li><strong>Nome ou Razão Social:</strong> O nome da sua loja ou do responsável.</li>
                 </ul>
-                <p className="text-xs text-slate-400">
+                <p className="text-xs text-ink-subtle">
                   Clique em &quot;Ativar Sistema Agora&quot;. Sua licença ficará gravada permanentemente no computador!
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 font-mono text-xs">
-                <div className="text-slate-400 mb-1 font-sans font-bold">Credenciais Padrão de Primeiro Acesso:</div>
-                <div className="text-white">Usuário: <span className="text-emerald-400 font-bold">admin</span></div>
-                <div className="text-white">Senha: <span className="text-emerald-400 font-bold">admin123</span> (ou admin)</div>
-                <p className="font-sans text-slate-400 mt-2 text-[11px]">
+              <div className="p-4 rounded-xl bg-surface border border-border-subtle font-mono text-xs">
+                <div className="text-ink-subtle mb-1 font-sans font-bold">Credenciais Padrão de Primeiro Acesso:</div>
+                <div className="text-ink">Usuário: <span className="text-accent-lime font-bold">admin</span></div>
+                <div className="text-ink">Senha: <span className="text-accent-lime font-bold">admin123</span> (ou admin)</div>
+                <p className="font-sans text-ink-subtle mt-2 text-[11px]">
                   Você poderá alterar a senha nas Configurações a qualquer momento para garantir sua privacidade.
                 </p>
               </div>
             </section>
 
             {/* Capítulo 3 */}
-            <section id="cap3" className="space-y-4 pt-6 border-t border-slate-800">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+            <section id="cap3" className="space-y-4 pt-6 border-t border-border-subtle">
+              <span className="text-xs font-bold uppercase tracking-wider text-accent-lime">
                 Capítulo 3
               </span>
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-ink">
                 Visão Geral do Painel de Controle e Menu Lateral
               </h2>
               <p>
@@ -209,52 +209,52 @@ export default function PdvManualPage() {
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
-                  <h4 className="font-bold text-white">Vendas Hoje</h4>
-                  <p className="text-xs text-slate-400">Total arrecadado no dia e quantidade de vendas realizadas.</p>
+                <div className="p-4 rounded-xl bg-surface border border-border-subtle space-y-1">
+                  <h4 className="font-bold text-ink">Vendas Hoje</h4>
+                  <p className="text-xs text-ink-subtle">Total arrecadado no dia e quantidade de vendas realizadas.</p>
                 </div>
-                <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
-                  <h4 className="font-bold text-white">Faturamento Mês & Lucro Bruto</h4>
-                  <p className="text-xs text-slate-400">Cálculo automático do lucro bruto baseado nos custos cadastrados.</p>
+                <div className="p-4 rounded-xl bg-surface border border-border-subtle space-y-1">
+                  <h4 className="font-bold text-ink">Faturamento Mês & Lucro Bruto</h4>
+                  <p className="text-xs text-ink-subtle">Cálculo automático do lucro bruto baseado nos custos cadastrados.</p>
                 </div>
-                <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
-                  <h4 className="font-bold text-white">Estoque Crítico</h4>
-                  <p className="text-xs text-slate-400">Itens que atingiram ou caíram abaixo do estoque mínimo configurado.</p>
+                <div className="p-4 rounded-xl bg-surface border border-border-subtle space-y-1">
+                  <h4 className="font-bold text-ink">Estoque Crítico</h4>
+                  <p className="text-xs text-ink-subtle">Itens que atingiram ou caíram abaixo do estoque mínimo configurado.</p>
                 </div>
-                <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
-                  <h4 className="font-bold text-white">Sessão de Caixa Atual</h4>
-                  <p className="text-xs text-slate-400">Status em tempo real (Aberto/Fechado), operador logado e fundo de troco.</p>
+                <div className="p-4 rounded-xl bg-surface border border-border-subtle space-y-1">
+                  <h4 className="font-bold text-ink">Sessão de Caixa Atual</h4>
+                  <p className="text-xs text-ink-subtle">Status em tempo real (Aberto/Fechado), operador logado e fundo de troco.</p>
                 </div>
               </div>
 
               {/* Tabela de Atalhos */}
-              <div className="overflow-hidden rounded-xl border border-slate-800 bg-slate-900 mt-4">
+              <div className="overflow-hidden rounded-xl border border-border-subtle bg-surface mt-4">
                 <table className="w-full text-left text-xs">
-                  <thead className="bg-slate-950 font-bold text-slate-300 border-b border-slate-800">
+                  <thead className="bg-canvas font-bold text-ink-muted border-b border-border-subtle">
                     <tr>
                       <th className="py-2.5 px-4 w-24">Atalho</th>
                       <th className="py-2.5 px-4">Ação no Sistema</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-slate-800">
+                  <tbody className="divide-y divide-border-subtle">
                     <tr>
-                      <td className="py-2 px-4 font-mono font-bold text-emerald-400">F1</td>
+                      <td className="py-2 px-4 font-mono font-bold text-accent-lime">F1</td>
                       <td className="py-2 px-4">Abre diretamente a Frente de Caixa (PDV / Caixa Rápido).</td>
                     </tr>
                     <tr>
-                      <td className="py-2 px-4 font-mono font-bold text-emerald-400">F2 (no PDV)</td>
+                      <td className="py-2 px-4 font-mono font-bold text-accent-lime">F2 (no PDV)</td>
                       <td className="py-2 px-4">Abre a janela de busca rápida de produtos por nome ou descrição.</td>
                     </tr>
                     <tr>
-                      <td className="py-2 px-4 font-mono font-bold text-emerald-400">F4 (no PDV)</td>
+                      <td className="py-2 px-4 font-mono font-bold text-accent-lime">F4 (no PDV)</td>
                       <td className="py-2 px-4">Abre o painel de recebimento para finalizar a venda.</td>
                     </tr>
                     <tr>
-                      <td className="py-2 px-4 font-mono font-bold text-emerald-400">ESC (no PDV)</td>
+                      <td className="py-2 px-4 font-mono font-bold text-accent-lime">ESC (no PDV)</td>
                       <td className="py-2 px-4">Cancela a venda em andamento ou fecha a janela atual.</td>
                     </tr>
                     <tr>
-                      <td className="py-2 px-4 font-mono font-bold text-emerald-400">F6</td>
+                      <td className="py-2 px-4 font-mono font-bold text-accent-lime">F6</td>
                       <td className="py-2 px-4">Abre o módulo de Ordens de Serviço (caso utilize assistência/oficina).</td>
                     </tr>
                   </tbody>
@@ -263,11 +263,11 @@ export default function PdvManualPage() {
             </section>
 
             {/* Capítulo 4 */}
-            <section id="cap4" className="space-y-4 pt-6 border-t border-slate-800">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+            <section id="cap4" className="space-y-4 pt-6 border-t border-border-subtle">
+              <span className="text-xs font-bold uppercase tracking-wider text-accent-lime">
                 Capítulo 4
               </span>
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-ink">
                 Configurações da Loja, Logotipo e Impressoras
               </h2>
               <div className="space-y-3">
@@ -287,11 +287,11 @@ export default function PdvManualPage() {
             </section>
 
             {/* Capítulo 5 */}
-            <section id="cap5" className="space-y-4 pt-6 border-t border-slate-800">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+            <section id="cap5" className="space-y-4 pt-6 border-t border-border-subtle">
+              <span className="text-xs font-bold uppercase tracking-wider text-accent-lime">
                 Capítulo 5
               </span>
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-ink">
                 Cadastro de Categorias, Produtos e Controle de Estoque
               </h2>
               <div className="space-y-3">
@@ -308,11 +308,11 @@ export default function PdvManualPage() {
             </section>
 
             {/* Capítulo 6 */}
-            <section id="cap6" className="space-y-4 pt-6 border-t border-slate-800">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+            <section id="cap6" className="space-y-4 pt-6 border-t border-border-subtle">
+              <span className="text-xs font-bold uppercase tracking-wider text-accent-lime">
                 Capítulo 6
               </span>
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-ink">
                 Gestão Segura do Caixa & Fechamento Cego
               </h2>
               <div className="space-y-3">
@@ -322,12 +322,12 @@ export default function PdvManualPage() {
                 <p>
                   <strong>6.2 Suprimentos e Sangrias:</strong> Registre entradas avulsas de moedas (suprimentos) ou saídas para o cofre/fornecedor (sangrias com justificativa obrigatória).
                 </p>
-                <div className="p-4 rounded-xl bg-slate-900 border border-emerald-500/30 space-y-1.5">
-                  <h4 className="font-bold text-white flex items-center gap-2">
-                    <Lock className="w-4 h-4 text-emerald-400" />
+                <div className="p-4 rounded-xl bg-surface border border-accent-lime/40 space-y-1.5">
+                  <h4 className="font-bold text-ink flex items-center gap-2">
+                    <Lock className="w-4 h-4 text-accent-lime" />
                     <span>6.3 O Que é o Fechamento de Caixa Cego?</span>
                   </h4>
-                  <p className="text-xs text-slate-300">
+                  <p className="text-xs text-ink-muted">
                     No encerramento do expediente, o sistema <strong>NÃO</strong> revela ao funcionário quanto deveria haver na gaveta. O operador conta as cédulas físicas e digita o valor. O sistema faz a conferência interna e registra se houve Exato, Sobra ou Falta, prevenindo desvios.
                   </p>
                 </div>
@@ -338,11 +338,11 @@ export default function PdvManualPage() {
             </section>
 
             {/* Capítulo 7 */}
-            <section id="cap7" className="space-y-4 pt-6 border-t border-slate-800">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+            <section id="cap7" className="space-y-4 pt-6 border-t border-border-subtle">
+              <span className="text-xs font-bold uppercase tracking-wider text-accent-lime">
                 Capítulo 7
               </span>
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-ink">
                 Frente de Caixa (PDV Ágil, Leitor USB, PIX QR e Comprovantes)
               </h2>
               <div className="space-y-3">
@@ -359,11 +359,11 @@ export default function PdvManualPage() {
             </section>
 
             {/* Capítulo 8 */}
-            <section id="cap8" className="space-y-4 pt-6 border-t border-slate-800">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+            <section id="cap8" className="space-y-4 pt-6 border-t border-border-subtle">
+              <span className="text-xs font-bold uppercase tracking-wider text-accent-lime">
                 Capítulo 8
               </span>
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-ink">
                 Crediário & Carnê a Receber (Venda Fiado)
               </h2>
               <div className="space-y-3">
@@ -377,11 +377,11 @@ export default function PdvManualPage() {
             </section>
 
             {/* Capítulo 9 */}
-            <section id="cap9" className="space-y-4 pt-6 border-t border-slate-800">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+            <section id="cap9" className="space-y-4 pt-6 border-t border-border-subtle">
+              <span className="text-xs font-bold uppercase tracking-wider text-accent-lime">
                 Capítulo 9
               </span>
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-ink">
                 Backup em 1 Clique e Restauração Física em Pen Drive (.pdvbak)
               </h2>
               <div className="space-y-3">
@@ -389,39 +389,39 @@ export default function PdvManualPage() {
                   <strong>9.1 Como Fazer Backup para Pen Drive:</strong> Conecte o Pen Drive, acesse o menu &quot;Backup (.pdvbak)&quot; e clique no botão &quot;Exportar Backup (.pdvbak)&quot;. Em menos de 1 segundo, o banco de dados inteiro é salvo em um arquivo único compacto.
                 </p>
                 <p>
-                  <strong>9.2 Como Restaurar um Backup:</strong> Ao formatar ou trocar de máquina, instale o PDV SPIN, vá em Backup → &quot;Restaurar Estado Anterior&quot; e selecione seu arquivo <code className="text-emerald-400 font-mono">.pdvbak</code>. O sistema verifica a integridade criptográfica SHA-256 e restaura tudo exatamente como estava.
+                  <strong>9.2 Como Restaurar um Backup:</strong> Ao formatar ou trocar de máquina, instale o PDV SPIN, vá em Backup → &quot;Restaurar Estado Anterior&quot; e selecione seu arquivo <code className="text-accent-lime font-mono">.pdvbak</code>. O sistema verifica a integridade criptográfica SHA-256 e restaura tudo exatamente como estava.
                 </p>
               </div>
             </section>
 
             {/* Capítulo 10 */}
-            <section id="cap10" className="space-y-4 pt-6 border-t border-slate-800">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+            <section id="cap10" className="space-y-4 pt-6 border-t border-border-subtle">
+              <span className="text-xs font-bold uppercase tracking-wider text-accent-lime">
                 Capítulo 10
               </span>
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-ink">
                 Perguntas Frequentes & Resolução Rápida de Dúvidas
               </h2>
               <div className="space-y-3">
-                <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
-                  <h4 className="font-bold text-white">1. O sistema precisa de internet para vender?</h4>
-                  <p className="text-xs text-slate-300">Não! O PDV SPIN é 100% offline e opera sem internet no balcão.</p>
+                <div className="p-4 rounded-xl bg-surface border border-border-subtle space-y-1">
+                  <h4 className="font-bold text-ink">1. O sistema precisa de internet para vender?</h4>
+                  <p className="text-xs text-ink-muted">Não! O PDV SPIN é 100% offline e opera sem internet no balcão.</p>
                 </div>
-                <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
-                  <h4 className="font-bold text-white">2. O software realmente não tem mensalidade?</h4>
-                  <p className="text-xs text-slate-300">Sim! A licença adquirida é permanente e vitalícia. Você nunca receberá boletos de aluguel.</p>
+                <div className="p-4 rounded-xl bg-surface border border-border-subtle space-y-1">
+                  <h4 className="font-bold text-ink">2. O software realmente não tem mensalidade?</h4>
+                  <p className="text-xs text-ink-muted">Sim! A licença adquirida é permanente e vitalícia. Você nunca receberá boletos de aluguel.</p>
                 </div>
-                <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
-                  <h4 className="font-bold text-white">3. Funciona com leitor de código de barras comum?</h4>
-                  <p className="text-xs text-slate-300">Sim! Qualquer leitor USB (com ou sem fio) funciona automaticamente sem drivers especiais.</p>
+                <div className="p-4 rounded-xl bg-surface border border-border-subtle space-y-1">
+                  <h4 className="font-bold text-ink">3. Funciona com leitor de código de barras comum?</h4>
+                  <p className="text-xs text-ink-muted">Sim! Qualquer leitor USB (com ou sem fio) funciona automaticamente sem drivers especiais.</p>
                 </div>
-                <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
-                  <h4 className="font-bold text-white">4. Não tenho impressora térmica. Posso usar impressora comum?</h4>
-                  <p className="text-xs text-slate-300">Sim! Todos os comprovantes, extratos e recibos exportam em PDF para a pasta Downloads para impressão em folha A4.</p>
+                <div className="p-4 rounded-xl bg-surface border border-border-subtle space-y-1">
+                  <h4 className="font-bold text-ink">4. Não tenho impressora térmica. Posso usar impressora comum?</h4>
+                  <p className="text-xs text-ink-muted">Sim! Todos os comprovantes, extratos e recibos exportam em PDF para a pasta Downloads para impressão em folha A4.</p>
                 </div>
-                <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
-                  <h4 className="font-bold text-white">5. Posso instalar em mais de um computador?</h4>
-                  <p className="text-xs text-slate-300">Cada licença cobre a ativação vitalícia de 1 computador (1 Ponto de Venda). Para mais computadores, basta adquirir licenças adicionais.</p>
+                <div className="p-4 rounded-xl bg-surface border border-border-subtle space-y-1">
+                  <h4 className="font-bold text-ink">5. Posso instalar em mais de um computador?</h4>
+                  <p className="text-xs text-ink-muted">Cada licença cobre a ativação vitalícia de 1 computador (1 Ponto de Venda). Para mais computadores, basta adquirir licenças adicionais.</p>
                 </div>
               </div>
             </section>

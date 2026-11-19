@@ -22,43 +22,42 @@ export default function DownloadsPage() {
   const clinica = DOWNLOADS_DATA.clinica;
 
   return (
-    <div className="bg-slate-950 text-slate-100 min-h-screen py-12 sm:py-16">
+    <div className="bg-canvas text-ink min-h-screen py-14 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Cabeçalho da Página */}
-        <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/30 text-xs font-semibold">
-            <Download className="w-3.5 h-3.5" />
-            <span>Repositório Oficial de Binários e Documentação</span>
-          </div>
+        <div className="max-w-3xl space-y-3">
+          <span className="font-mono text-xs sm:text-sm text-accent-lime block">
+            {"// "}repositório oficial de binários e documentação
+          </span>
 
-          <h1 className="text-4xl sm:text-5xl font-black text-white tracking-tight">
-            Central de Downloads & Manuais
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-ink tracking-tight">
+            Central de Downloads &amp; Manuais
           </h1>
 
-          <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
+          <p className="text-ink-muted text-base sm:text-lg leading-relaxed">
             Obtenha aqui as versões oficiais e definitivas dos softwares da SPIN. Sem formulários obrigatórios ou cadastros prévios: clique e baixe diretamente.
           </p>
         </div>
 
         {/* Tabela de Instaladores Oficiais */}
         <div className="space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
-                Binários de Produção
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div className="space-y-1">
+              <span className="font-mono text-xs text-accent-lime block">
+                {"// "}binários de produção
               </span>
-              <h2 className="text-2xl font-bold text-white">Instaladores de Softwares</h2>
+              <h2 className="text-2xl font-extrabold text-ink">Instaladores de Softwares</h2>
             </div>
-            <span className="text-xs text-slate-400">
-              Arquivos limpos, livres de adware e testados contra vírus
+            <span className="font-mono text-xs text-ink-subtle">
+              Arquivos limpos, livres de adware e verificados
             </span>
           </div>
 
-          <div className="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/60 shadow-xl">
+          <div className="overflow-hidden rounded-2xl border border-border-subtle bg-surface">
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="border-b border-slate-800 bg-slate-900 text-xs uppercase font-bold text-slate-300">
+                  <tr className="border-b border-border-subtle bg-canvas/60 text-xs font-mono uppercase text-ink-subtle">
                     <th className="py-4 px-6">Software / Pacote</th>
                     <th className="py-4 px-6">Sistema Operacional</th>
                     <th className="py-4 px-6">Versão</th>
@@ -66,34 +65,36 @@ export default function DownloadsPage() {
                     <th className="py-4 px-6 text-right">Download Imediato</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-800 text-sm">
+                <tbody className="divide-y divide-border-subtle text-sm">
                   {/* PDV Windows */}
-                  <tr className="hover:bg-slate-800/40 transition-colors">
+                  <tr className="hover:bg-surface-elevated/40 transition-colors">
                     <td className="py-4 px-6">
-                      <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
+                      <div className="flex items-center gap-3.5">
+                        <div className="w-10 h-10 rounded-full bg-accent-lime flex items-center justify-center text-canvas shrink-0">
                           <ShoppingCart className="w-4 h-4" />
                         </div>
                         <div>
-                          <div className="font-bold text-white">PDV SPIN Gestão Comercial</div>
-                          <div className="text-xs font-mono text-slate-400">
+                          <div className="font-bold text-ink">PDV SPIN Gestão Comercial</div>
+                          <div className="text-xs font-mono text-ink-subtle">
                             PDV-Spin-Gestao-Comercial-Windows.zip
                           </div>
                         </div>
                       </div>
                     </td>
                     <td className="py-4 px-6">
-                      <span className="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-semibold">
+                      <span className="px-2.5 py-1 rounded-lg bg-canvas border border-border-subtle text-ink-muted text-xs font-mono">
                         Windows 10 / 11
                       </span>
                     </td>
-                    <td className="py-4 px-6 font-mono text-xs text-slate-300">1.0 Oficial</td>
-                    <td className="py-4 px-6 font-mono text-xs text-emerald-400 font-bold">7.0 MB</td>
+                    <td className="py-4 px-6 font-mono text-xs text-ink-muted">1.0 Oficial</td>
+                    <td className="py-4 px-6 font-mono text-xs text-accent-lime font-bold">
+                      7.0 MB
+                    </td>
                     <td className="py-4 px-6 text-right">
                       <a
                         href="/downloads/softwares/PDV-Spin-Gestao-Comercial-Windows.zip"
                         download
-                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-950/40 transition-all"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-accent-lime hover:brightness-110 text-canvas text-xs font-bold transition-all"
                       >
                         <Download className="w-3.5 h-3.5" />
                         <span>Baixar ZIP</span>
@@ -102,64 +103,70 @@ export default function DownloadsPage() {
                   </tr>
 
                   {/* PDV macOS */}
-                  <tr className="hover:bg-slate-800/40 transition-colors">
+                  <tr className="hover:bg-surface-elevated/40 transition-colors">
                     <td className="py-4 px-6">
-                      <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
+                      <div className="flex items-center gap-3.5">
+                        <div className="w-10 h-10 rounded-full bg-accent-mint flex items-center justify-center text-canvas shrink-0">
                           <ShoppingCart className="w-4 h-4" />
                         </div>
                         <div>
-                          <div className="font-bold text-white">PDV SPIN para macOS</div>
-                          <div className="text-xs font-mono text-slate-400">PDV-Spin-macOS.zip</div>
+                          <div className="font-bold text-ink">PDV SPIN para macOS</div>
+                          <div className="text-xs font-mono text-ink-subtle">
+                            PDV-Spin-macOS.zip
+                          </div>
                         </div>
                       </div>
                     </td>
                     <td className="py-4 px-6">
-                      <span className="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-semibold">
+                      <span className="px-2.5 py-1 rounded-lg bg-canvas border border-border-subtle text-ink-muted text-xs font-mono whitespace-nowrap">
                         Apple macOS (Intel / Silicon)
                       </span>
                     </td>
-                    <td className="py-4 px-6 font-mono text-xs text-slate-300">1.0 Oficial</td>
-                    <td className="py-4 px-6 font-mono text-xs text-emerald-400 font-bold">6.2 MB</td>
+                    <td className="py-4 px-6 font-mono text-xs text-ink-muted">1.0 Oficial</td>
+                    <td className="py-4 px-6 font-mono text-xs text-accent-mint font-bold">
+                      6.2 MB
+                    </td>
                     <td className="py-4 px-6 text-right">
                       <a
                         href="/downloads/softwares/PDV-Spin-macOS.zip"
                         download
-                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-bold transition-all"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-canvas hover:bg-surface-elevated text-ink border border-border-subtle text-xs font-bold transition-all"
                       >
-                        <Download className="w-3.5 h-3.5 text-emerald-400" />
+                        <Download className="w-3.5 h-3.5 text-accent-mint" />
                         <span>Baixar ZIP</span>
                       </a>
                     </td>
                   </tr>
 
                   {/* Clínica SPIN Windows EXE */}
-                  <tr className="hover:bg-slate-800/40 transition-colors">
+                  <tr className="hover:bg-surface-elevated/40 transition-colors">
                     <td className="py-4 px-6">
-                      <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 rounded-lg bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 shrink-0">
+                      <div className="flex items-center gap-3.5">
+                        <div className="w-10 h-10 rounded-full bg-accent-violet flex items-center justify-center text-canvas shrink-0">
                           <Stethoscope className="w-4 h-4" />
                         </div>
                         <div>
-                          <div className="font-bold text-white">Clínica SPIN Setup Oficial</div>
-                          <div className="text-xs font-mono text-slate-400">
+                          <div className="font-bold text-ink">Clínica SPIN Setup Oficial</div>
+                          <div className="text-xs font-mono text-ink-subtle">
                             Clinica-Spin-Setup-1.0.0.exe
                           </div>
                         </div>
                       </div>
                     </td>
                     <td className="py-4 px-6">
-                      <span className="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-semibold">
+                      <span className="px-2.5 py-1 rounded-lg bg-canvas border border-border-subtle text-ink-muted text-xs font-mono">
                         Windows 10 / 11
                       </span>
                     </td>
-                    <td className="py-4 px-6 font-mono text-xs text-slate-300">1.0.0 Definitiva</td>
-                    <td className="py-4 px-6 font-mono text-xs text-sky-400 font-bold">87.2 MB</td>
+                    <td className="py-4 px-6 font-mono text-xs text-ink-muted">1.0.0 Definitiva</td>
+                    <td className="py-4 px-6 font-mono text-xs text-accent-violet font-bold">
+                      87.2 MB
+                    </td>
                     <td className="py-4 px-6 text-right">
                       <a
                         href="/downloads/softwares/Clinica-Spin-Setup-1.0.0.exe"
                         download
-                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold shadow-md shadow-sky-950/40 transition-all"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-accent-violet hover:brightness-110 text-canvas text-xs font-bold transition-all"
                       >
                         <Download className="w-3.5 h-3.5" />
                         <span>Baixar EXE</span>
@@ -174,92 +181,92 @@ export default function DownloadsPage() {
 
         {/* Seção de Manuais do Usuário */}
         <div id="manuais" className="space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-indigo-400">
-                Documentação Completa
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div className="space-y-1">
+              <span className="font-mono text-xs text-accent-violet block">
+                {"// "}documentação completa
               </span>
-              <h2 className="text-2xl font-bold text-white">Manuais Oficiais do Usuário</h2>
+              <h2 className="text-2xl font-extrabold text-ink">Manuais Oficiais do Usuário</h2>
             </div>
-            <span className="text-xs text-slate-400">
-              Disponíveis para download em formato PDF e leitura online formatada
+            <span className="font-mono text-xs text-ink-subtle">
+              PDF para download + leitura online formatada
             </span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Manual PDV SPIN */}
-            <div className="p-8 rounded-3xl bg-slate-900/80 border border-emerald-500/30 flex flex-col justify-between space-y-6 hover:border-emerald-500/60 transition-all">
+            <div className="p-8 rounded-2xl bg-surface border border-border-subtle flex flex-col justify-between space-y-6 hover:border-accent-lime/50 transition-colors">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
-                    <BookOpen className="w-6 h-6" />
+                  <div className="w-11 h-11 rounded-full bg-accent-lime flex items-center justify-center text-canvas">
+                    <BookOpen className="w-5 h-5" />
                   </div>
-                  <span className="px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-slate-300">
-                    20 Páginas • PDF
+                  <span className="px-3 py-1 rounded-full bg-canvas border border-border-subtle text-xs font-mono text-accent-lime">
+                    20 Páginas · PDF
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold text-white">
-                  Manual Oficial & Guia de Operação — PDV SPIN
+                <h3 className="text-xl font-bold text-ink">
+                  Manual Oficial &amp; Guia de Operação — PDV SPIN
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
                   Guia passo a passo ilustrado com rotinas de caixa, teclas de atalho (F1 a F6), fechamento de caixa cego, controle de estoque com margem de lucro, crediário e backup físico em Pen Drive.
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-slate-800 flex flex-wrap items-center gap-3">
+              <div className="pt-4 border-t border-border-subtle flex flex-wrap items-center gap-3">
                 <a
                   href={pdv.manual.url}
                   download
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-950/30"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-accent-lime hover:brightness-110 text-canvas text-xs font-bold transition-all"
                 >
                   <Download className="w-4 h-4" />
                   <span>Baixar PDF ({pdv.manual.sizeFormatted})</span>
                 </a>
                 <Link
                   href="/manuais/pdv-spin"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-semibold"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-canvas hover:bg-surface-elevated text-ink border border-border-subtle text-xs font-semibold transition-colors"
                 >
-                  <BookOpen className="w-4 h-4 text-emerald-400" />
+                  <BookOpen className="w-4 h-4 text-accent-lime" />
                   <span>Ler Online</span>
                 </Link>
               </div>
             </div>
 
             {/* Manual Clínica SPIN */}
-            <div className="p-8 rounded-3xl bg-slate-900/80 border border-sky-500/30 flex flex-col justify-between space-y-6 hover:border-sky-500/60 transition-all">
+            <div className="p-8 rounded-2xl bg-surface border border-border-subtle flex flex-col justify-between space-y-6 hover:border-accent-violet/50 transition-colors">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400">
-                    <BookOpen className="w-6 h-6" />
+                  <div className="w-11 h-11 rounded-full bg-accent-violet flex items-center justify-center text-canvas">
+                    <BookOpen className="w-5 h-5" />
                   </div>
-                  <span className="px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-slate-300">
-                    15 Páginas • PDF
+                  <span className="px-3 py-1 rounded-full bg-canvas border border-border-subtle text-xs font-mono text-accent-violet">
+                    15 Páginas · PDF
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold text-white">
-                  Manual de Instalação & Operação — Clínica SPIN
+                <h3 className="text-xl font-bold text-ink">
+                  Manual de Instalação &amp; Operação — Clínica SPIN
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
                   O guia definitivo para médicos, dentistas, fisioterapeutas e equipe de recepção. Abrange configuração de rede local (Médico + Secretária sem internet), prontuário LGPD, sala de espera e repasses.
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-slate-800 flex flex-wrap items-center gap-3">
+              <div className="pt-4 border-t border-border-subtle flex flex-wrap items-center gap-3">
                 <a
                   href={clinica.manual.url}
                   download
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold shadow-md shadow-sky-950/30"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-accent-violet hover:brightness-110 text-canvas text-xs font-bold transition-all"
                 >
                   <Download className="w-4 h-4" />
                   <span>Baixar PDF ({clinica.manual.sizeFormatted})</span>
                 </a>
                 <Link
                   href="/manuais/clinica-spin"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-semibold"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-canvas hover:bg-surface-elevated text-ink border border-border-subtle text-xs font-semibold transition-colors"
                 >
-                  <BookOpen className="w-4 h-4 text-sky-400" />
+                  <BookOpen className="w-4 h-4 text-accent-violet" />
                   <span>Ler Online</span>
                 </Link>
               </div>
@@ -267,69 +274,71 @@ export default function DownloadsPage() {
           </div>
         </div>
 
-        {/* Passo a Passo Pós-Download */}
-        <div className="p-8 sm:p-10 rounded-3xl bg-slate-900 border border-slate-800 space-y-6">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20">
+        {/* Passo a Passo Pós-Download (estilo Slide 5: 01, 02, 03, 04) */}
+        <div className="space-y-6">
+          <div className="flex items-center gap-3.5">
+            <div className="w-11 h-11 rounded-full bg-accent-amber flex items-center justify-center text-canvas shrink-0">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-white">Instruções Rápidas Pós-Download</h3>
-              <p className="text-xs text-slate-400">O que você precisa saber após baixar os instaladores</p>
+              <span className="font-mono text-xs text-accent-lime block">
+                {"// "}quatro passos após baixar
+              </span>
+              <h3 className="text-xl font-extrabold text-ink">Instruções Rápidas Pós-Download</h3>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-xs text-slate-300">
-            <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
-              <span className="w-6 h-6 rounded-full bg-slate-800 text-white flex items-center justify-center font-bold text-xs">
-                1
-              </span>
-              <h4 className="font-bold text-white text-sm">Descompactar / Executar</h4>
-              <p className="text-slate-400 leading-relaxed">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-5 text-xs text-ink-muted">
+            <div className="p-6 rounded-2xl bg-surface border border-border-subtle space-y-3">
+              <span className="font-mono text-3xl font-bold text-accent-lime block">01</span>
+              <h4 className="font-bold text-ink text-sm">Descompactar / Executar</h4>
+              <p className="leading-relaxed">
                 No PDV SPIN, extraia o arquivo ZIP e execute o atalho. No Clínica SPIN, execute o arquivo .EXE.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
-              <span className="w-6 h-6 rounded-full bg-slate-800 text-white flex items-center justify-center font-bold text-xs">
-                2
-              </span>
-              <h4 className="font-bold text-white text-sm">Windows SmartScreen</h4>
-              <p className="text-slate-400 leading-relaxed">
-                Se surgir a tela azul do Windows, clique em <strong>&quot;Mais informações&quot;</strong> e depois <strong>&quot;Executar assim mesmo&quot;</strong>.
+            <div className="p-6 rounded-2xl bg-surface border border-border-subtle space-y-3">
+              <span className="font-mono text-3xl font-bold text-accent-lime block">02</span>
+              <h4 className="font-bold text-ink text-sm">Windows SmartScreen</h4>
+              <p className="leading-relaxed">
+                Se surgir a tela azul do Windows, clique em{" "}
+                <strong className="text-ink">&quot;Mais informações&quot;</strong> e depois{" "}
+                <strong className="text-ink">&quot;Executar assim mesmo&quot;</strong>.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
-              <span className="w-6 h-6 rounded-full bg-slate-800 text-white flex items-center justify-center font-bold text-xs">
-                3
-              </span>
-              <h4 className="font-bold text-white text-sm">Ativação Offline</h4>
-              <p className="text-slate-400 leading-relaxed">
+            <div className="p-6 rounded-2xl bg-surface border border-border-subtle space-y-3">
+              <span className="font-mono text-3xl font-bold text-accent-lime block">03</span>
+              <h4 className="font-bold text-ink text-sm">Ativação Offline</h4>
+              <p className="leading-relaxed">
                 Insira sua chave de licença vitalícia permanente enviada na sua compra. Não é necessário internet.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
-              <span className="w-6 h-6 rounded-full bg-slate-800 text-white flex items-center justify-center font-bold text-xs">
-                4
-              </span>
-              <h4 className="font-bold text-white text-sm">Acesso Padrão</h4>
-              <p className="text-slate-400 leading-relaxed">
-                Usuário padrão de fábrica: <strong>admin</strong> | Senha: <strong>admin123</strong>. Altere nas Configurações.
+            <div className="p-6 rounded-2xl bg-surface border border-border-subtle space-y-3">
+              <span className="font-mono text-3xl font-bold text-accent-lime block">04</span>
+              <h4 className="font-bold text-ink text-sm">Acesso Padrão</h4>
+              <p className="leading-relaxed">
+                Usuário padrão de fábrica: <strong className="text-ink font-mono">admin</strong> |
+                Senha: <strong className="text-ink font-mono">admin123</strong>. Altere nas Configurações.
               </p>
             </div>
           </div>
         </div>
 
         {/* Box de Suporte Direto */}
-        <div className="text-center p-8 rounded-3xl bg-slate-900/60 border border-slate-800 space-y-4">
-          <h3 className="text-xl font-bold text-white">Precisa de Ajuda com o Download ou Instalação?</h3>
-          <p className="text-sm text-slate-300 max-w-lg mx-auto">
-            Nossa equipe técnica atende diretamente pelo e-mail oficial sem burocracia ou robôs:
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-            <span className="font-mono text-sm text-indigo-400 select-all font-bold">
+        <div className="p-8 rounded-2xl bg-surface border border-border-subtle flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-1.5 text-center md:text-left">
+            <span className="font-mono text-xs text-accent-lime block">{"// "}suporte direto</span>
+            <h3 className="text-xl font-bold text-ink">
+              Precisa de Ajuda com o Download ou Instalação?
+            </h3>
+            <p className="text-sm text-ink-muted">
+              Nossa equipe técnica atende diretamente pelo e-mail oficial sem burocracia ou robôs.
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
+            <span className="font-mono text-sm text-accent-lime select-all font-bold">
               {COMPANY_CONTACT.email}
             </span>
             <CopyEmailButton variant="primary" />

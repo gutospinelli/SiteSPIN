@@ -23,7 +23,6 @@ export default function CopyEmailButton({
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     } catch {
-      // Fallback para navegadores sem permissão de clipboard direta
       const textArea = document.createElement("textarea");
       textArea.value = COMPANY_CONTACT.email;
       document.body.appendChild(textArea);
@@ -36,17 +35,17 @@ export default function CopyEmailButton({
   };
 
   const baseStyles =
-    "inline-flex items-center justify-center font-medium transition-all duration-200 cursor-pointer text-sm select-none rounded-lg";
+    "inline-flex items-center justify-center font-semibold transition-all duration-200 cursor-pointer text-sm select-none rounded-xl whitespace-nowrap shrink-0";
 
   const variantStyles = {
     primary:
-      "bg-indigo-600 hover:bg-indigo-700 text-white shadow-sm hover:shadow px-4 py-2.5",
+      "bg-accent-lime hover:brightness-110 text-canvas font-bold px-4 py-2.5",
     secondary:
-      "bg-slate-800 hover:bg-slate-700 text-slate-100 border border-slate-700 px-4 py-2.5",
+      "bg-surface hover:bg-surface-elevated text-ink border border-border-subtle px-4 py-2.5",
     subtle:
-      "bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 px-3 py-1.5",
+      "bg-surface-elevated hover:bg-border-subtle text-ink border border-border-subtle px-3 py-1.5",
     pill:
-      "bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 px-3 py-1 text-xs rounded-full",
+      "bg-surface-elevated hover:bg-border-subtle text-accent-lime border border-border-subtle px-3 py-1 text-xs font-mono rounded-full",
   };
 
   return (
@@ -59,8 +58,18 @@ export default function CopyEmailButton({
     >
       {copied ? (
         <>
-          <Check className="w-4 h-4 text-emerald-400 mr-2 shrink-0 animate-in fade-in" />
-          <span className="font-semibold text-emerald-300">E-mail copiado!</span>
+          <Check
+            className={`w-4 h-4 mr-1.5 shrink-0 ${
+              variant === "primary" ? "text-canvas" : "text-accent-mint"
+            }`}
+          />
+          <span
+            className={`font-bold ${
+              variant === "primary" ? "text-canvas" : "text-accent-mint"
+            }`}
+          >
+            E-mail copiado!
+          </span>
         </>
       ) : (
         <>
@@ -74,9 +83,11 @@ export default function CopyEmailButton({
 
 export function ContactDirectPill({ className = "" }: { className?: string }) {
   return (
-    <div className={`inline-flex items-center gap-2 bg-slate-900/80 border border-slate-700/80 rounded-full px-3 py-1.5 text-xs text-slate-300 ${className}`}>
-      <Mail className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
-      <span className="font-mono text-slate-200 select-all">{COMPANY_CONTACT.email}</span>
+    <div
+      className={`inline-flex items-center gap-2 bg-surface border border-border-subtle rounded-full px-3.5 py-1.5 text-xs text-ink-muted ${className}`}
+    >
+      <Mail className="w-3.5 h-3.5 text-accent-lime shrink-0" />
+      <span className="font-mono text-ink select-all">{COMPANY_CONTACT.email}</span>
       <CopyEmailButton variant="pill" showIcon={false} />
     </div>
   );

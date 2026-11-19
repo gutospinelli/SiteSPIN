@@ -14,10 +14,10 @@ export default function PrintButton({
     <button
       type="button"
       onClick={() => window.print()}
-      className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-semibold cursor-pointer transition-colors ${className}`}
+      className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface hover:bg-surface-elevated text-ink border border-border-subtle text-xs font-semibold cursor-pointer transition-colors ${className}`}
       title="Imprimir ou Salvar em PDF via Navegador"
     >
-      <Printer className="w-4 h-4 text-slate-400" />
+      <Printer className="w-4 h-4 text-ink-muted" />
       <span>{label}</span>
     </button>
   );
